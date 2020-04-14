@@ -176,7 +176,7 @@ class WumpusWorld(gym.Env):
             reward = -1
         
         # return reward, state, is_done
-        return reward, self._get_current_state(scream, bump), gameover
+        return self._get_current_state(scream, bump), reward, gameover, {}
 
     def get_valid_actions(self):
         return self.valid_actions
